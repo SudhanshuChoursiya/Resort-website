@@ -1,0 +1,142 @@
+html{
+    font-size:62.5%;
+}
+
+body{
+    background-color: ghostwhite;
+}
+
+
+.dashboard_img_container{
+   background: url('images/contact-background.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height:22rem;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+       
+}
+
+.dashboard_img_container h1{
+    font-size:3.5rem;
+    color: white;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.dropdown a{
+    font-size:1.44rem!important;
+}
+
+.dropdown ul li{
+    
+    font-size: 1.44rem!important;
+}
+
+.table_container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.caption{
+    font-size:2.3rem;
+    text-align: center;
+    margin-bottom:1rem;
+}
+
+thead th{
+    font-size: 1.62rem!important;
+    position: sticky!important;
+    background-color:wheat!important;
+    
+}
+
+tbody{
+    vertical-align:baseline!important;
+}
+
+tbody td{
+    font-size: 1.52rem!important;
+    
+}
+
+.delete_btn{
+    font-size: 1.175rem!important;
+    padding:0.3rem 0.4rem;
+}
+
+.booking_container{
+    margin-bottom:2rem;
+}
+
+.contact_container{
+    margin-bottom:2rem;
+}
+
+.modal-body{
+    font-size:1.7rem!important;
+}
+
+
+.booking_collum_nowrap{
+    white-space: nowrap!important;
+}
+
+@media(min-width:600px) and (max-width:1023px){
+    
+     .about_us_img_container{
+        min-height:34rem;
+    }
+    
+   .about_us_page_img_container img{
+    height:24rem!important;
+    width:46vw!important;
+    
+    }
+
+    .paragraph_container p{
+    min-width:95.1vw!important;
+    }
+}
+
+
+@media(min-width:1024px) and (max-width:2200px){
+    
+    
+     .about_us_img_container{
+       min-height:34rem;
+    }
+    
+    .about_us_page_img_container img{
+    height:24rem!important;
+    width:34rem!important;
+    
+    }
+    
+    .paragraph_container p{
+    min-width:70rem!important;
+    }
+    
+}
+
+
+@media(min-width:2201px) and (max-width:5000px){
+
+    .about_us_img_container{
+        min-height:34rem;
+    }
+        
+    .about_us_page_img_container img{
+    height:24rem!important;
+    width:34rem!important;
+    }
+    
+    .paragraph_container p{
+    min-width:70rem!important;
+    }
+
+}

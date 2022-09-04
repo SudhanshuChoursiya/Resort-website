@@ -1,0 +1,119 @@
+html{
+    font-size:62.5%;
+}
+
+body{
+    background-color: #141414;
+}
+
+.gallery_main_slide_container{
+   background: url('images/contact-background.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height:22rem;
+   display: flex;
+   justify-content:center;
+   align-items: center;       
+}
+
+.gallery_main_slide_container h1{
+    font-size:3.5rem;
+    color: white;
+    text-decoration: underline;
+}
+
+
+.exterior_and_interior h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center!important;
+    justify-content: center;
+    margin-top:3rem;
+    margin-bottom:1.8rem;
+    font-size: 2.3rem!important;
+    color: whitesmoke;
+}
+
+
+.gallery_photos_main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 1rem;
+}
+
+.gallery_photos_container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin:1rem;
+}
+
+.gallery_photos_container img{
+    height:23rem;
+    width:90vw;    
+}
+
+
+
+@media(min-width:600px) and (max-width:1023px){
+    
+     .gallery_main_slide_container{
+        min-height:34rem;
+    }
+    
+    .gallery_photos_main_container{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    .gallery_photos_container img{
+    height:22.5rem!important;
+    max-width:44vw!important;
+    
+    }
+
+}
+
+
+@media(min-width:1024px) and (max-width:2200px){
+    
+    
+     .gallery_main_slide_container{
+       min-height:34rem;
+    }
+    
+    .gallery_photos_main_container{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    .gallery_photos_container img{
+    height:18rem!important;
+    width:21vw!important;
+    
+    }
+    
+}
+
+
+@media(min-width:2201px) and (max-width:5000px){
+
+    .gallery_main_slide_container{
+        min-height:34rem;
+    }
+     
+    .gallery_photos_main_container{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+      
+   .gallery_photos_container img{
+    height:18rem!important;
+    width:21vw!important;
+    
+    }
+
+}

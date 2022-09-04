@@ -1,0 +1,247 @@
+<%-include('./partials/header.ejs',{loggedin:loggedin}) %>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Booking</title>
+    <link rel="stylesheet" href="booking.css">
+    
+     <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/> 
+     
+  </head>
+  <body>
+     
+     
+      <div class="booking_img_container">
+         <h1 class="text-center my-2">Bookings</h1>
+      </div>
+        
+        <div class="booking_form_main_container">
+                        
+                
+        <div class="container">
+                        
+          <div class="want_to_make_booking_main_container">
+            <div>
+                <h1>Want to make booking?</h1>            
+                <p>Please fill out our request form below or e-mail us at msdresort7@gmail.com</p>
+            </div>
+        </div> 
+    
+            <form action="/bookings" method="post">
+          <div class="booking_container">
+             
+    <div class="input_date_container">
+        
+        <div class="starting_date_container">
+        <input type="date" name="starting_date" class="starting_date" id="starting_date">
+        <span class="starting_calender_icon">
+           <i class="fa-solid fa-calendar-days"></i>  
+        </span>
+        </div>
+         
+        
+        <div class="ending_date_container">
+        <input type="date" name="ending_date" class="ending_date" id="ending_date">
+        
+        <span class="ending_calender_icon">
+           <i class="fa-solid fa-calendar-days"></i> 
+           
+        </span>
+        </div>
+        </div>
+         
+         <div class="submit_btn_container">
+        <a href="#" id="availablity_btn"><button type="submit" name="submit" class="reservation_btn">check availablity</button></a>
+       </div>
+                     
+      
+     <% if(dateAvailablity==true){%>
+      <div class="alert alert-success alert-dismissible fade show alert_box alert_container" role="alert">
+  <strong>Hurray!</strong> This date is available for booking.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%>
+
+<% if(datenotAvailablity==true){%>
+      <div class="alert alert-danger alert-dismissible fade show alert_box alert_container" role="alert">
+  <strong>Sorry!</strong> Booking for this date is not Available.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%>
+    
+    <% if(min_date_Availablity==true){%>
+
+ <div class="alert alert-danger alert-dismissible fade show alert_box alert_container" role="alert">
+  <strong>Sorry!</strong> Ending Date must be greater then Starting Date.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%> 
+
+        </div>   
+           </form>
+           
+           
+            <% if(success==true){%>
+      <div class="alert alert-success alert-dismissible fade show alert_box alert_container" role="alert">
+  <strong>Sucess!</strong> Please pay your payment to confirm booking.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%>
+
+<% if(notavailable==true){%>
+
+ <div class="alert alert-danger alert-dismissible fade show alert_box alert_container" role="alert">
+  <strong>Sorry!</strong> booking for this date is not available.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%>
+
+ <% if(min_date_notmatched==true){%>
+
+ <div class="alert alert-danger alert-dismissible fade show alert_box alert_container" role="alert">
+  <strong>Sorry!</strong> Ending Date must be greater then Starting Date.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%> 
+
+ <% if(criteria_notmatched==true){%>
+
+ <div class="alert alert-danger alert-dismissible fade show alert_box alert_container" role="alert">
+  <strong>Sorry!</strong> Minimum 7 days Booking is Must for Marriage function.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%> 
+
+           
+          <form action="/booking" method="post" class="booking_form_container row g-3">
+          
+                     
+   <div class="col-md-6 booking_form">   
+    <input type="text" class="form-control" id="name" name="name" minlength="3" maxlength="20" placeholder="Name" required>
+  </div>
+    
+  <div class="col-md-6 booking_form">  
+    <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email" required>
+  </div>
+  
+   <div class="col-md-6 booking_form">  
+    <input type="tel" class="form-control" id="phoneno" name="mobileno" minlength="10" maxlength="10" placeholder="Mobile No." required>
+  </div>
+  
+  
+   <div class="col-md-6 booking_form type_container">
+       <span class="select_type_container">
+           
+   <select name="bookingfor" class="form-control" id="booking_type" oninput="hintMsg(),dates()">
+       <option value="" disabled selected hidden>Select Type</option>
+      
+       
+       <option value="For Marriage">For Marriage</option>
+       <option value="For other Function">For other Function</option>
+        
+   </select>
+   
+     <span class="caret_icon">
+           <i class="fa-solid fa-angle-down"></i>          
+        </span>
+                
+  </span>  
+  </div>
+  
+  <small class="hint_message" id="hint">Note: Minimum 7 days booking is must for this type.</small>
+  
+   <div class="col-md-6 booking_form">
+       <span class="input_container">
+    <input type="text" class="form-control date" name="startingdate" placeholder="Starting date" id="booking_starting_date" onfocus="this.type='date'" oninput="dates()" required>
+     <span class="caret_icon">
+            <i class="fa-solid fa-calendar-days"></i> 
+           
+        </span>
+    </span>
+  </div>
+  
+   <div class="col-md-6 booking_form"> 
+       <span class="input_container">
+    <input type="text" class="form-control date" name="endingdate" placeholder="Ending date" id="booking_ending_date" oninput="dates()" onfocus="this.type='date'" required>
+    <span class="caret_icon">
+           <i class="fa-solid fa-calendar-days"></i> 
+           
+        </span>
+        </span>
+  </div>
+    
+  
+   <div class="form booking_form">
+  <textarea class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 100px" name="message" maxlength="150"></textarea>
+</div>
+    
+  <span class="rate_container" id="rate">
+  </span>
+  
+ <div class="col-md-12 amount_container">
+        <input type="hidden" name="amount" id="amount_value">        
+    </div>
+  
+  <div class="col-12 booking_form">
+    <button type="submit" class="btn btn-primary">SUBMIT</button>
+  </div>
+</form>
+
+<div class="stay_touch_main_container">
+       <div class="stay_touch_container">
+        <h1>STAY IN TOUCH</h1>
+        <p>Feel free to contact us directly if you have any inquiries regarding accommodation. We would love to have you stay with us!</p>
+        </div>
+       </div>
+
+      </div>                                       
+    </div>
+
+
+    <div class="facilities_provide_container">
+        <h1>FACILITIES WE PROVIDES</h1>
+    </div>
+    
+    
+    <div class="facilities_icon_main_container">
+        <% icons.forEach((e)=>{%>
+            
+           <div class="facilities_icon_container">
+            <img src="<%=e.icon_src%>" alt="icon">
+            <h1><%=e.icon_title%></h1>
+        </div> 
+            
+        <%})%>        
+        
+    </div>
+ 
+
+
+
+   <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>  
+    
+    <script src="swiper.js"></script>    
+     
+   <script src="frontend.js"></script>
+       
+   
+     <script src="https://kit.fontawesome.com/07af7e6881.js" crossorigin="anonymous"></script>
+      
+    <!--Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+<%-include('./partials/footer.ejs') %>

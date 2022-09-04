@@ -1,0 +1,515 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    background-color: #141414;     
+}
+
+.carousel-item img{
+    object-fit: cover;
+    height:27rem;
+}
+
+.carousel-indicators button{
+   width:2.7rem !important;
+}
+
+.carousel-control-prev-icon{
+    width:3.2rem !important;
+    height:3.2rem !important;
+}
+
+.carousel-control-next-icon{
+    width:3.2rem !important;
+    height:3.2rem !important;
+}
+
+
+
+.input_date_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:3rem;
+}
+
+.starting_date{
+    height:4.5rem;
+    width:90vw;
+    margin:0.5rem 0;
+    outline: none;
+    appearance: none;
+    font-size:1.65rem;
+    padding:0 1rem;
+    position: relative;
+    background: transparent;
+    color: #d5ccb2;
+}
+
+
+
+.ending_date{
+    height:4.5rem;
+    width:90vw;
+    margin:0.5rem 0;
+    outline: none;
+    appearance: none;  
+    font-size:1.65rem;
+    padding:0 1rem;
+    background: transparent;
+    color:#d5ccb2;
+    
+}
+
+.starting_date_container{
+   position: relative;
+}
+
+
+.starting_calender_icon{
+    height:2rem;
+    width:2rem;
+    position: absolute;
+    right:1.8rem;
+    top:1.7rem;
+    z-index: 100;
+    
+}
+
+.starting_calender_icon i{
+    color: #d5ccb2!important;
+    font-size: 2rem;
+}
+
+.ending_date_container{
+   position: relative;
+}
+
+.ending_calender_icon{
+    height:2rem;
+    width:2rem;
+    position: absolute;
+    right:1.8rem;
+    top:1.7rem;
+    z-index: 100;
+    
+}
+
+.ending_calender_icon i{
+    color: #d5ccb2!important;
+    font-size: 2rem;
+}
+
+.reservation_btn{
+    background-color:#edb03b!important;
+    display: inline-block;
+    text-decoration: none;
+    color:#1d1d1d!important;
+    font-size:1.58rem!important;
+    font-weight:510!important;
+    padding:0.42rem 0;
+    height: 4.5rem;
+    width:90vw;
+    border-radius: 0.24rem;
+    border:none;
+    outline: none; 
+    text-transform: uppercase;
+}
+
+.reservation_btn:hover{
+    background:#d59e35!important;
+}
+
+.submit_btn_container{
+    display: flex!important;
+    justify-content:center;
+    align-items: center;
+    margin-top:0.7rem;
+    margin-bottom:1rem;
+}
+
+.submit_btn_container a{
+    text-decoration: none;
+}
+
+.submit_btn_container button{
+    text-transform: uppercase;
+}
+
+.explore_heading_container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin:1rem 0;
+}
+
+.explore_heading h2{
+    font-size:2.15rem;
+    margin:0.5rem 0;
+    text-align: center;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.explore_heading h1{
+    font-size:2.65rem;
+    color:#fbcf3f!important;
+    margin:0.5rem 0.4rem;
+    text-transform: uppercase;
+}
+
+.explore_heading_container p{
+    font-size:1.575rem;
+    text-align:center;
+    color:#d8d8d8;
+    width:91vw;
+}
+
+.explore_heading_container a{
+    font-size:1.55rem;
+    text-align:center;
+    color:#f0c53c;
+    text-decoration:none;
+    font-weight: bold;
+    margin-top:0.5rem;
+    margin-bottom:2rem;
+}
+
+
+.underline{
+    height: 1rem;
+    width:3.5rem;
+    background-color:#f4d37a!important;
+}
+
+.book_now_container{
+  position: relative;
+  margin-top:1rem;
+  margin-bottom: 4rem;
+  height:100vh!important;
+}
+
+.book_now_container img{
+    width: 100%;
+    height:30rem;
+    opacity:0.35;
+    object-fit: cover;
+}
+
+.book_container{
+    position: absolute;
+    width:100%!important;
+    height:100%!important;
+    top:0;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.book_container h1{
+    color:ghostwhite;
+    text-align:center;
+    font-size:2.5rem;
+    text-transform:capitalize;
+    margin-bottom:1rem;
+    max-width:94vw;
+}
+
+
+.book_container p{
+    color: gainsboro;
+    text-align: center;
+    font-size:1.54rem;
+    width:85vw;
+}
+
+.book_btn{
+    background-color:#edb03b!important;
+    display: inline-block;
+    text-decoration: none;
+    color:#1d1d1d!important;
+    font-size:1.55rem!important;
+    font-weight:510!important;
+    padding:0.42rem 0;
+    height: 4.2rem;
+    width:14rem;
+    border-radius: 0.24rem;
+    border:none;
+    outline: none; 
+    text-transform: uppercase;
+}
+
+.book_btn:hover{
+    background:#d59e35!important;
+}
+
+
+.book_btn_container{
+    display: flex!important;
+    justify-content:center;
+    align-items: center;
+    margin-top:0.7rem;
+    margin-bottom:1rem;
+}
+
+.book_btn_container a{
+    text-decoration:none;
+    font-size:1.55rem;
+    color:#1d1d1d!important;
+    border:none;
+    border-radius:0.24rem;
+}
+
+
+.swiper {
+    width: 100%;
+    height:100%;
+    background: #000;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 4rem 6rem;
+}
+
+.parallax-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+}
+
+      
+.swiper-slide .title {
+    font-size: 4.1rem;
+    font-weight: 300;
+}
+
+.swiper-slide .subtitle {
+    font-size: 2.1rem;
+}
+
+.swiper-slide .text {
+    font-size: 1.4rem;
+    max-width: 40rem;
+    line-height: 1.3;
+}
+
+
+.testimonial_container{
+    margin-top:1rem;
+    margin-bottom:4rem;
+}
+
+.parallax-bg{
+    background-color:#deb75d;
+}
+
+.swiper-button-prev::after{
+    font-size:3rem!important;
+}
+
+.swiper-button-next::after{
+    font-size:3rem!important;
+}
+
+.title{
+    text-align: center;
+    margin-bottom:1.5rem;
+    
+}
+
+.title img{
+    height:10.5rem;
+    width: 10.5rem;
+    border:0.2px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.text{
+    max-width:100%!important;
+}
+
+.text p{
+    text-align: center;
+    font-size:1.9rem;
+    max-width:78vw;
+}
+
+
+.testimonial_customer_name{
+    text-align: center;    
+}
+
+.testimonial_customer_name h1{
+    font-size:1.9rem!important;
+}
+
+@media(min-width:600px) and (max-width:1023px){
+    
+    .carousel-item img{
+        height:40vh!important;
+    }
+    
+    .input_date_container{
+        flex-direction: row!important;
+    }
+    
+    .booking_container{
+        display: flex!important;
+        flex-direction: column!important;
+    }
+    
+    .starting_date{
+        width:28rem;
+        margin:0 0.5rem;
+    }
+    
+     .ending_date{
+        width:28rem;
+        margin:0 0.5rem;
+    }
+    
+    .starting_calender_icon{
+        top:1.2rem;
+    }
+    
+    .ending_calender_icon{
+        top:1.2rem;
+    }
+    
+    .reservation_btn{
+        min-width:57.2rem;
+        max-width:57.2rem;
+        margin-top:0.5rem;
+    }
+    
+    .explore_heading_container p{
+        width:76.4vw;
+    }
+    
+    
+    .book_container p{
+        width:69vw;
+    }
+    
+}
+
+@media(min-width:1024px) and (max-width:2200px){
+    
+    .carousel-item img{
+        height:61vh!important;
+    }
+    
+    .input_date_container{
+        flex-direction: row!important;
+    }
+    
+   .booking_container{
+        display: flex!important;
+        flex-direction: column!important;
+    }
+    
+   .starting_date{
+        width:33.7rem;
+        margin:0 0.5rem;
+    }
+    
+     .ending_date{
+        width:33.7rem;
+        margin:0 0.5rem;
+    }
+    
+    .starting_calender_icon{
+        top:1.2rem;
+    }
+    
+    .ending_calender_icon{
+        top:1.2rem;
+    }
+    
+    
+   .reservation_btn{
+        min-width:68.3rem;
+        max-width:68.3rem;
+        margin-top:0.5rem;
+    }
+    
+    .explore_heading_container p{
+        width:67.5vw;
+    }
+    
+    .book_container p{
+        width:67vw;
+    }
+}
+
+@media(min-width:2201px) and (max-width:5000px){
+
+    .carousel-item img{
+        height:70vh!important;
+    }
+    
+    .input_date_container{
+        flex-direction: row!important;
+    }
+    
+    .booking_container{
+        display: flex!important;
+        flex-direction: column!important;
+    }
+    
+   .starting_date{
+        width:33.7rem;
+        margin:0 0.5rem;
+    }
+    
+     .ending_date{
+        width:33.7rem;
+        margin:0 0.5rem;
+    }
+    
+    .starting_calender_icon{
+        top:1.2rem;
+    }
+    
+    .ending_calender_icon{
+        top:1.2rem;
+    }
+    
+    
+    .reservation_btn{
+        min-width:68.3rem;
+        max-width:68.3rem;
+        margin-top:0.5rem;
+    }
+    
+    .explore_heading_container p{
+        width:67.5vw;
+    }
+    
+    .book_container p{
+        width:67vw;
+    }
+}

@@ -1,0 +1,66 @@
+html{
+    font-size:62.5%;
+}
+
+body{
+    background-color: #141414;
+}
+
+.heading{
+    color: white;
+}
+
+.buttons{
+    margin-top:1rem;
+}
+
+p1{
+    color: whitesmoke;
+}
+
+.logincontainer{
+    min-height:83.4vh;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal-title{
+    font-size:1.8rem;
+}
+
+.login_form label{
+    font-size:1.6rem;
+}
+
+.login_form input{
+    font-size:1.67rem;
+}
+
+.login_form button{
+    font-size:1.36rem!important;
+}
+
+.alert_box{
+    font-size:1.37rem;
+}
+
+.modal-footer a{
+    font-size:1.55rem;
+}
+
+.input_password_container{
+    position: relative;
+}
+
+.icon_container{
+    position: absolute;
+    top: 25.5%;
+    right:3.4%;
+}
+
+.icon_container i{
+    font-size:1.7rem;
+}

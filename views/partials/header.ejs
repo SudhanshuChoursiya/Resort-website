@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="header.css">
+  </head>
+  <body>
+    
+    <!-- Navbar starts from here -->
+    
+<nav class="navbar navbar-expand-lg navbar-dark py-4">
+  <div class="container-fluid mx-2">
+           <span class="logo_container">
+          <img src="images/logo.png" alt="img" class="logo_image">
+          <a class="navbar-brand web-title mx-2" href="#">MSD7 Resort</a>
+          </span>
+           
+      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About us</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/facilities" class="nav-link">Facilities</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/gallery" class="nav-link">Gallery</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/contact" class="nav-link">Contact us</a>
+        </li>
+               
+      </ul>
+ 
+     <div class="navbar_bottom_container form">
+     <div class="book_btn_container">
+     <a href="/booking"><button class="book_now_btn" type="button">Book Now</button></a>
+     
+      <% if(loggedin==false){ %>
+            <div class="signup_login_main_container">
+            <a href="/signup"><button class="btn btn-outline-info py-2 mx-2"  type="button">Signup</button></a>
+        
+        <a href="/login"><button class="btn btn-outline-warning py-2"  type="button">Login</button></a> 
+        
+       <% }else if(loggedin==true){%>
+           <a href="/logout"><button class="btn btn-outline-warning py-2"  type="button">Logout</button></a>
+                                 
+        
+      <% }%>
+         
+          <% if(admin==true){%>
+          <a href="/dashboard"><button class="btn btn-outline-info dashboard_btn py-2"  type="button">Dashboard</button></a> 
+        <%}%>
+         </div>          
+       </div>                                             
+      </div>
+    </div>
+  </div>
+</nav>  
+
+  </body>
+</html>
